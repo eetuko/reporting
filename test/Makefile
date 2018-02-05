@@ -19,7 +19,7 @@ TITLE='Title to be defined'
 export TITLE
 PANDOC_TITLE=-M title=$(TITLE)
 
-PANDOC_HTML_OPTIONS=--to html5 -c css/style.css --template='templates/custom.html5'
+PANDOC_HTML_OPTIONS=--to html5 -c ../css/style.css --template='../templates/custom.html5'
 
 %.html : %.md
 	$(PANDOC) $(PANDOC_OPTIONS) $(PANDOC_TITLE) $(PANDOC_HTML_OPTIONS) -o $@ $<
